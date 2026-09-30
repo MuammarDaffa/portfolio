@@ -180,7 +180,8 @@ button {
 }
 
 .navbar__link:hover,
-.navbar__link:focus-visible {
+.navbar__link:focus-visible,
+.navbar__link.is-active {
   color: var(--color-text);
 }
 
@@ -195,7 +196,8 @@ button {
   transition: width var(--transition-base);
 }
 
-.navbar__link:hover::after {
+.navbar__link:hover::after,
+.navbar__link.is-active::after {
   width: 100%;
 }
 

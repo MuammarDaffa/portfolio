@@ -8,7 +8,7 @@ import './styles/main.css';
 const projectsData = [
   {
     name: 'Dapur Aisyah',
-    description: 'Website pemesanan katering secara online yang memungkinkan pelanggan melihat menu dan melakukan pemesanan.',
+    description: 'Platform e-commerce pemesanan katering (Harian & Acara) dengan fitur manajemen operasional terpadu, penjadwalan ulang, dan integrasi pembayaran otomatis via Midtrans.',
     tech: ['Laravel', 'PHP', 'MySQL', 'Tailwind'],
     image: '/images/dapur_aisyah.png',
     github: 'https://github.com/MuammarDaffa/Dapur_Aisyah_Final',
@@ -24,7 +24,7 @@ const projectsData = [
   },
   {
     name: 'Flutter Book App',
-    description: 'Aplikasi Flutter yang mengambil data dari Open Books API dan menampilkan judul buku, sinopsis, dan rating.',
+    description: 'Aplikasi mobile berbasis Flutter untuk mencari dan melihat detail buku menggunakan Google Books API. Dilengkapi fitur penyimpanan buku favorit secara lokal dengan SQLite.',
     tech: ['Flutter', 'Dart', 'API'],
     image: '/images/buku.png',
     github: 'https://github.com/MuammarDaffa/flutter_book_app',
@@ -57,17 +57,17 @@ function renderProjects() {
     <article class="project-card">
       <div class="project-card__image-wrapper">
         ${project.svg
-          ? project.svg
-          : project.image
-            ? `<img src="${project.image}" alt="Screenshot of ${project.name}" class="project-card__image" loading="lazy" />`
-            : `<div class="project-card__image-placeholder">
+      ? project.svg
+      : project.image
+        ? `<img src="${project.image}" alt="Screenshot of ${project.name}" class="project-card__image" loading="lazy" />`
+        : `<div class="project-card__image-placeholder">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                   <circle cx="8.5" cy="8.5" r="1.5"/>
                   <polyline points="21 15 16 10 5 21"/>
                 </svg>
               </div>`
-        }
+    }
       </div>
       <div class="project-card__body">
         <h3 class="project-card__name">${project.name}</h3>
