@@ -32,22 +32,6 @@ const projectsData = [
   }
 ];
 
-// ---- Experience Data ----
-const experienceData = [
-  // Uncomment and fill in when you have real experience:
-  // {
-  //   position: 'Web Developer Intern',
-  //   company: 'Company Name',
-  //   period: 'Jan 2026 — Mar 2026',
-  //   description: 'Description of role and contributions.',
-  //   responsibilities: [
-  //     'Built and maintained web features using Laravel',
-  //     'Collaborated with the team on database design',
-  //   ],
-  //   tech: ['Laravel', 'PHP', 'MySQL'],
-  // },
-];
-
 
 // ============================================
 // RENDER FUNCTIONS
@@ -101,43 +85,6 @@ function renderProjects() {
   `).join('');
 }
 
-/**
- * Render experience items into the DOM
- */
-function renderExperience() {
-  const container = document.getElementById('experienceList');
-  if (!container) return;
-
-  if (experienceData.length === 0) {
-    container.innerHTML = `
-      <div class="experience__placeholder">
-        Experience, internships, or relevant activities will be listed here as they become available.
-      </div>
-    `;
-    return;
-  }
-
-  container.innerHTML = experienceData.map(exp => `
-    <div class="experience__item">
-      <div class="experience__header">
-        <div class="experience__position">${exp.position}</div>
-        <div class="experience__period">${exp.period}</div>
-      </div>
-      <div class="experience__company">${exp.company}</div>
-      ${exp.description ? `<p class="experience__desc">${exp.description}</p>` : ''}
-      ${exp.responsibilities && exp.responsibilities.length > 0 ? `
-        <ul class="experience__responsibilities">
-          ${exp.responsibilities.map(r => `<li>${r}</li>`).join('')}
-        </ul>
-      ` : ''}
-      ${exp.tech && exp.tech.length > 0 ? `
-        <div class="experience__tech">
-          ${exp.tech.map(t => `<span class="experience__tech-tag">${t}</span>`).join('')}
-        </div>
-      ` : ''}
-    </div>
-  `).join('');
-}
 
 
 // ============================================
@@ -202,7 +149,6 @@ function initScrollSpy() {
 
 document.addEventListener('DOMContentLoaded', () => {
   renderProjects();
-  renderExperience();
   initMobileNav();
   initScrollSpy();
 });
