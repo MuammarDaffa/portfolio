@@ -570,17 +570,17 @@ button {
 
 .project-card__image,
 .project-card__image-svg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 110px; /* Smaller than wrapper to create a concentric border effect */
+  height: 110px;
+  object-fit: contain; /* Ensure the logo is not cropped */
   object-position: center;
   border-radius: 50%;
   display: block;
 }
 
 .project-card__image-placeholder {
-  width: 100%;
-  height: 100%;
+  width: 110px;
+  height: 110px;
   color: var(--color-text-tertiary);
   background-color: var(--color-bg-alt);
   border-radius: 50%;
