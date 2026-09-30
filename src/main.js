@@ -88,11 +88,7 @@ function renderProjects() {
       <div class="project-card__body">
         <h3 class="project-card__name">${project.name}</h3>
         <p class="project-card__desc">${project.description}</p>
-        
-        <div class="project-card__tech">
-          ${project.tech.map(t => `<span class="project-card__tech-tag">${t}</span>`).join('')}
-        </div>
-        
+
         <div class="project-card__footer">
           <span class="project-card__price-fake">Lihat</span>
           ${project.demo ? `
