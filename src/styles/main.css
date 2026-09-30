@@ -292,7 +292,7 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(105deg, var(--color-bg) 0%, var(--color-bg) 45%, #181818 65%, #0d0d0d 100%);
+  background: linear-gradient(105deg, var(--color-bg) 0%, var(--color-bg) 30%, #e6e6e6 48%, #888888 65%, #3a3a3a 85%, #2f2f2f 100%);
   z-index: 1;
 }
 
@@ -331,7 +331,7 @@ button {
 
 @media (max-width: 768px) {
   .hero__bg {
-    background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg) 45%, #181818 65%, #0d0d0d 100%);
+    background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg) 30%, #e6e6e6 48%, #888888 65%, #3a3a3a 85%, #2f2f2f 100%);
   }
   
   .hero__inner {
