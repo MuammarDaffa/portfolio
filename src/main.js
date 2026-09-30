@@ -94,7 +94,7 @@ function renderProjects() {
         </div>
         
         <div class="project-card__footer">
-          <span class="project-card__price-fake">Project</span>
+          <span class="project-card__price-fake">Lihat</span>
           ${project.demo ? `
           <a href="${project.demo}" class="project-card__action" target="_blank" rel="noopener noreferrer" aria-label="Live Demo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
