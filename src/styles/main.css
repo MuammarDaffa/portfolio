@@ -557,9 +557,9 @@ button {
 .project-card__image-wrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 75%; /* 4:3 Aspect Ratio */
+  padding-bottom: 100%; /* 1:1 Aspect Ratio for circle */
   background-color: #f2f2f2;
-  border-radius: 16px;
+  border-radius: 50%; /* Make it a circle */
   overflow: hidden;
   margin-bottom: var(--space-xl);
   flex-shrink: 0;
@@ -932,25 +932,6 @@ button:focus:not(:focus-visible) {
 
   .skills__grid {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  .project-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .project-card__image {
-    border-bottom: none;
-    border-right: 1px solid var(--color-border);
-    aspect-ratio: auto;
-    min-height: 320px;
-  }
-
-  .project-card__body {
-    padding: var(--space-2xl);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 }
 
