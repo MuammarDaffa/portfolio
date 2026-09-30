@@ -589,33 +589,7 @@ button {
   justify-content: center;
 }
 
-.project-card__badge {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-text);
-  color: var(--color-bg);
-  border: 3px solid var(--color-bg);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
-  z-index: 10;
-  transform: translate(15%, -15%);
-}
 
-.project-card__badge:hover {
-  background-color: var(--color-text-secondary);
-  transform: translate(15%, -15%) scale(1.05);
-}
-
-.project-card__badge svg {
-  width: 20px;
-  height: 20px;
-}
 
 .project-card__body {
   display: flex;
