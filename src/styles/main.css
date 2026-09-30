@@ -541,9 +541,10 @@ button {
 .project-card {
   display: flex;
   flex-direction: column;
-  padding: 12px;
-  background-color: #212121; /* Dark background like reference */
-  border: 1px solid var(--color-border); /* But using website's border */
+  height: 100%;
+  padding: 16px;
+  background-color: #212121;
+  border: 1px solid var(--color-border);
   border-radius: 24px;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
@@ -556,23 +557,31 @@ button {
 .project-card__image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  background-color: #f2f2f2; /* Light background for the image block */
+  padding-bottom: 75%; /* 4:3 Aspect Ratio */
+  background-color: #f2f2f2;
   border-radius: 16px;
   overflow: hidden;
-  margin-bottom: var(--space-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: var(--space-xl);
+  flex-shrink: 0;
 }
 
-.project-card__image {
+.project-card__image,
+.project-card__image-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .project-card__image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   color: var(--color-text-tertiary);
   display: flex;
   align-items: center;
@@ -583,8 +592,8 @@ button {
   position: absolute;
   top: 12px;
   right: 12px;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   background-color: #212121;
   color: #ffffff;
   border-radius: 50%;
@@ -592,6 +601,7 @@ button {
   align-items: center;
   justify-content: center;
   transition: background-color var(--transition-fast), transform var(--transition-fast);
+  z-index: 10;
 }
 
 .project-card__badge:hover {
@@ -600,48 +610,47 @@ button {
 }
 
 .project-card__badge svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 .project-card__body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 0 8px 8px;
+  padding: 0 8px;
 }
 
 .project-card__name {
   font-family: var(--font-serif);
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   font-weight: 600;
-  color: #ffffff; /* White text on dark bg */
-  margin-bottom: var(--space-xs);
+  color: #ffffff;
+  margin-bottom: var(--space-sm);
   line-height: 1.3;
 }
 
 .project-card__desc {
   font-size: var(--text-sm);
   color: #a0a0a0;
-  line-height: 1.5;
-  margin-bottom: var(--space-md);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
   flex-grow: 1;
 }
 
 .project-card__tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: var(--space-md);
+  gap: 8px;
+  margin-bottom: var(--space-xl);
 }
 
 .project-card__tech-tag {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: #a0a0a0;
   background-color: transparent;
   padding: 4px 0;
-  margin-right: 8px;
 }
 
 .project-card__footer {
@@ -649,20 +658,22 @@ button {
   align-items: center;
   justify-content: space-between;
   margin-top: auto;
+  border-top: 1px solid #333333;
+  padding-top: var(--space-md);
 }
 
 .project-card__price-fake {
-  font-size: var(--text-xl);
-  font-weight: 700;
+  font-size: var(--text-lg);
+  font-weight: 600;
   color: #ffffff;
 }
 
 .project-card__action {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   background-color: #ffffff;
   color: #212121;
-  border-radius: 12px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -675,8 +686,8 @@ button {
 }
 
 .project-card__action svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 

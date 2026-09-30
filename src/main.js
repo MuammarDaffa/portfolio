@@ -8,25 +8,25 @@ import './styles/main.css';
 const projectsData = [
   {
     name: 'Dapur Aisyah',
-    description: 'Aplikasi katering berbasis web untuk mengelola menu, pesanan, pembayaran, dan stok harian.',
+    description: 'Website pemesanan katering secara online yang memungkinkan pelanggan melihat menu dan melakukan pemesanan.',
     tech: ['Laravel', 'PHP', 'MySQL', 'Tailwind'],
-    image: null,
+    svg: `<svg class="project-card__image-svg" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="80" y="60" width="240" height="180" rx="12" fill="#ffffff" stroke="#212121" stroke-width="4"/><path d="M80 90H320" stroke="#212121" stroke-width="4"/><circle cx="100" cy="75" r="4" fill="#212121"/><circle cx="116" cy="75" r="4" fill="#212121"/><path d="M150 190H250C250 155 225 130 200 130C175 130 150 155 150 190Z" fill="#f2f2f2" stroke="#212121" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M190 130V120C190 114.477 194.477 110 200 110C205.523 110 210 114.477 210 120V130" stroke="#212121" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><line x1="140" y1="190" x2="260" y2="190" stroke="#212121" stroke-width="4" stroke-linecap="round"/><circle cx="280" cy="120" r="16" fill="#e5e5e5"/><circle cx="120" cy="200" r="12" fill="#e5e5e5"/></svg>`,
     github: 'https://github.com/',
     demo: 'https://example.com',
   },
   {
-    name: 'EduTrack System',
-    description: 'Sistem informasi akademik sederhana untuk melacak nilai dan kehadiran siswa secara efisien.',
-    tech: ['JavaScript', 'Express.js', 'Node.js'],
-    image: '/images/thrones.png',
+    name: 'Coffee Thrones',
+    description: 'Website Coffee Thrones dengan fitur CRUD untuk mengelola menu dan galeri.',
+    tech: ['PHP', 'MySQL', 'JavaScript'],
+    svg: `<svg class="project-card__image-svg" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="80" y="60" width="240" height="180" rx="12" fill="#ffffff" stroke="#212121" stroke-width="4"/><path d="M80 90H320" stroke="#212121" stroke-width="4"/><circle cx="100" cy="75" r="4" fill="#212121"/><circle cx="116" cy="75" r="4" fill="#212121"/><path d="M160 120H220V170C220 186.569 206.569 200 190 200C173.431 200 160 186.569 160 170V120Z" fill="#f2f2f2" stroke="#212121" stroke-width="4" stroke-linejoin="round"/><path d="M220 140H230C238.284 140 245 146.716 245 155C245 163.284 238.284 170 230 170H220" stroke="#212121" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M180 110C175 105 185 95 180 90" stroke="#212121" stroke-width="4" stroke-linecap="round"/><path d="M200 110C195 105 205 95 200 90" stroke="#212121" stroke-width="4" stroke-linecap="round"/><circle cx="130" cy="130" r="14" fill="#e5e5e5"/><circle cx="270" cy="210" r="10" fill="#e5e5e5"/></svg>`,
     github: 'https://github.com/',
     demo: 'https://example.com',
   },
   {
-    name: 'Personal Portfolio',
-    description: 'Website portofolio minimalis dan responsif yang dibangun menggunakan Vanilla JS dan HTML/CSS.',
-    tech: ['HTML', 'CSS', 'JavaScript'],
-    image: null,
+    name: 'Flutter Book App',
+    description: 'Aplikasi Flutter yang mengambil data dari Open Books API dan menampilkan judul buku, sinopsis, dan rating.',
+    tech: ['Flutter', 'Dart', 'API'],
+    svg: `<svg class="project-card__image-svg" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="140" y="30" width="120" height="240" rx="16" fill="#ffffff" stroke="#212121" stroke-width="4"/><path d="M180 30V40C180 45.5228 184.477 50 190 50H210C215.523 50 220 45.5228 220 40V30" fill="#212121"/><path d="M165 100H235V170H165V100Z" fill="#f2f2f2" stroke="#212121" stroke-width="4" stroke-linejoin="round"/><line x1="175" y1="115" x2="215" y2="115" stroke="#212121" stroke-width="4" stroke-linecap="round"/><line x1="175" y1="135" x2="225" y2="135" stroke="#212121" stroke-width="4" stroke-linecap="round"/><line x1="175" y1="155" x2="200" y2="155" stroke="#212121" stroke-width="4" stroke-linecap="round"/><circle cx="100" cy="180" r="16" fill="#e5e5e5"/><circle cx="300" cy="100" r="12" fill="#e5e5e5"/></svg>`,
     github: 'https://github.com/',
     demo: 'https://example.com',
   }
@@ -72,15 +72,17 @@ function renderProjects() {
   container.innerHTML = projectsData.map(project => `
     <article class="project-card">
       <div class="project-card__image-wrapper">
-        ${project.image
-          ? `<img src="${project.image}" alt="Screenshot of ${project.name}" class="project-card__image" loading="lazy" />`
-          : `<div class="project-card__image-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-            </div>`
+        ${project.svg
+          ? project.svg
+          : project.image
+            ? `<img src="${project.image}" alt="Screenshot of ${project.name}" class="project-card__image" loading="lazy" />`
+            : `<div class="project-card__image-placeholder">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <polyline points="21 15 16 10 5 21"/>
+                </svg>
+              </div>`
         }
         ${project.github ? `
         <a href="${project.github}" class="project-card__badge" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repo">
