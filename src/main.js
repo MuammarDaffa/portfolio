@@ -11,24 +11,24 @@ const projectsData = [
     description: 'Website pemesanan katering secara online yang memungkinkan pelanggan melihat menu dan melakukan pemesanan.',
     tech: ['Laravel', 'PHP', 'MySQL', 'Tailwind'],
     image: '/images/dapur_aisyah.png',
-    github: 'https://github.com/',
-    demo: 'https://example.com',
+    github: 'https://github.com/MuammarDaffa/Dapur_Aisyah_Final',
+    demo: 'https://github.com/MuammarDaffa/Dapur_Aisyah_Final',
   },
   {
     name: 'Coffee Thrones',
-    description: 'Website Coffee Thrones dengan fitur CRUD untuk mengelola menu dan galeri.',
-    tech: ['PHP', 'MySQL', 'JavaScript'],
+    description: 'Website promosi kedai kopi yang dibangun dengan Laravel. Memiliki halaman khusus admin (CMS) untuk mengelola katalog menu produk, galeri, hingga jam operasional secara dinamis .',
+    tech: ['Laravel', 'PHP', 'MySQL', 'JavaScript'],
     image: '/images/thrones (2).png',
-    github: 'https://github.com/',
-    demo: 'https://example.com',
+    github: 'https://github.com/MuammarDaffa/website-coffee-thrones',
+    demo: 'https://github.com/MuammarDaffa/website-coffee-thrones',
   },
   {
     name: 'Flutter Book App',
     description: 'Aplikasi Flutter yang mengambil data dari Open Books API dan menampilkan judul buku, sinopsis, dan rating.',
     tech: ['Flutter', 'Dart', 'API'],
     image: '/images/buku.png',
-    github: 'https://github.com/',
-    demo: 'https://example.com',
+    github: 'https://github.com/MuammarDaffa/flutter_book_app',
+    demo: 'https://github.com/MuammarDaffa/flutter_book_app',
   }
 ];
 
